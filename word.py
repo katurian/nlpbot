@@ -1,8 +1,7 @@
-﻿import discord
+import discord
 import asyncio
 from discord.ext.commands import Bot
 import platform
-import matplotlib.pyplot as plt
 import wordcloud
 from os import path
 from wordcloud import WordCloud
@@ -22,11 +21,17 @@ async def on_ready():
 async def on_message(message):
   if (message.author.bot == True):
     return
-  if '!wordcloud' in message.content:
+  if '!wordcloud' in message.content and len(str(message.content)) < 12:
     d = path.dirname(__file__)
     text = open(path.join(d, 'lonesome.txt')).read()
     wordcloud = WordCloud().generate(text)
-    plt.imshow(wordcloud, interpolation = 'bilinear')
+    wordcloud = WordCloud(max_font_size = 50, background_color = "white", contour_width = 3).generate(text)
+    wordcloud.to_file("cloud.png")
+    await client.send_file(message.channel, 'cloud.png')
+  if '!wordcloud' in message.content and len(str(message.content)) < 12:
+    d = path.dirname(__file__)
+    text = open(path.join(d, 'lonesome.txt')).read()
+    wordcloud = WordCloud().generate(text)
     wordcloud = WordCloud(max_font_size = 50, background_color = "white", contour_width = 3).generate(text)
     wordcloud.to_file("cloud.png")
     await client.send_file(message.channel, 'cloud.png')

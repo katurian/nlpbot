@@ -3,7 +3,7 @@
    ### !poem
 Generates a poem based on chat messages collected by serverlog.py
    ### !ipa
-Converts message text to International Phonetic Alphabet (IPA)
+Converts message text to International Phonetic Alphabet (IPA).
    ### !worcloud
 Generates a wordcloud based on chat messages collected by serverlog.py
    ### !worcloud start:stop

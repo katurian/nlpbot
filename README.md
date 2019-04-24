@@ -1,4 +1,4 @@
 # nlpbot
-##commands
-##!poem
+## commands
+## !poem
 Generates a poem 

@@ -1,5 +1,5 @@
 # nlpbot
-## commands
+## COMMANDS
    ### !poem
 Generates a poem based on chat messages collected by serverlog.py
    ### !ipa

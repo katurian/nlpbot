@@ -11,7 +11,7 @@ Generates a wordcloud based on slices of chat messages collected by serverlog.py
 ```
 !wordcloud 5:200
 ```
-This generates a wordcloud of the 5th to 200th word
+This generates a wordcloud of the 5th to 200th word in your server log.
 
    ### !syllables
 Outputs the number of syllables in message text.
